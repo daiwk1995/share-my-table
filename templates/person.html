@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   	<head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/s/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="/s/css/style.css"/>
+	    <link rel="stylesheet" href="/s/css/header.css"/>
+        <script src="/s/js/jquery.min.js"></script>
+        <script src="/s/js/bootstrap.min.js"></script>
+        <script src="/s/js/jquery-3.3.1.min.js"></script>
+        <script src="/s/js/js.cookie.js"></script>
+	    <script src="/s/js/routine.js"></script>
+	</head>
+	<body onload="bag()">
+        <div class="container-fluid">
+
+         <div class="row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+             <div class="header row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                 <div class="logo">logo</div>
+                 <div class="menu">
+                     <a class="name" id="getuname" href="/person"></a>
+                     <a class="name" href="/second">Home</a>
+                     <button class="logout" onclick="logout();">
+                         <img style='width: 30px; height: 30px;' src='s/img/logout.png'/>
+                     </button>
+                 </div>
+             </div>
+         </div>
+
+            <div style="margin-top: 100px;margin-bottom: 30px;">
+		        <div class="per_left col-lg-2 col-xs-2 col-sm-2">
+		    	    <img class="per_pho center-block" src="s/img/pho1.jpeg" />
+		    	    <div class="per_name center-block pe_name"></div>
+                    <button class="center-block" style="height: 45px;width: auto;background-color: white;border-radius: 10px; border: 2px solid burlywood;color: #C0A16B;font-size: 16px; " onclick="setting()">Personal Setting</button>
+                    <button class="per_back center-block" style="margin-top:130px;" onclick="window.history.go(-1)">BACK</button>
+		        </div>
+		        <div class="per_main col-lg-9 col-xs-9 col-sm-9" id="setting">
+                    <button class="person_btn center-block" onclick="window.location.href='/bag'">View Grocevies</button>
+                    <button class="person_btn center-block" onclick="">Add Item</button>
+
+{#                  <button class="person_back" onclick="window.location.href='/recipe'">BACK</button>#}
+                </div>
+            </div>
+		</div>
+	</body>
+</html>

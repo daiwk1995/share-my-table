@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/s/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="/s/css/style.css"/>
+	    <link rel="stylesheet" href="/s/css/header.css"/>
+        <script src="/s/js/jquery.min.js"></script>
+        <script src="/s/js/bootstrap.min.js"></script>
+        <script src="/s/js/jquery-3.3.1.min.js"></script>
+        <script src="/s/js/js.cookie.js"></script>
+	    <script src="/s/js/routine.js"></script>
+        <script src="/s/js/layer/layer.js"></script>
+    </head>
+    <body onload="bag(1);">
+		<div class="container-fluid">
+
+            <div class="row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                <div class="header row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                    <div class="logo">logo</div>
+                    <div class="menu">
+                        <a class="name" id="getuname" href="/person"></a>
+                        <a class="name" href="/second">Home</a>
+                        <button class="logout" onclick="logout();">
+                            <img style='width: 30px; height: 30px;' src='s/img/logout.png'/>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 100px;">
+		        <div class="per_main col-lg-12 col-md-12 col-xs-12 col-sm-12" style="height: auto;">
+                    <div class="search_frame center-block" style="margin: 20px auto 0px 10px;">
+		    			<input class="search_input" style="width: 300px;" type="text" id="searchbag" value=""/>
+		    			<button class="search_bn" onclick="search(2)">
+                            <img style='width: 45px; height: 45px;' src='s/img/search.png'/>
+                        </button>
+		    		</div>
+{#                    <button class="add_btn" style="margin-top: 20px;" onclick="window.location.href='/addmessage'">Add</button>#}
+                    <h1 style="margin-left: 30px;">BAG</h1>
+                    <span id="searchbaritem"></span>
+                    <hr width="100%"/>
+                    <div>
+                        <table style="width: 100%; margin: 20px auto">
+                            <thead class="baglist"></thead>
+                        </table>
+                    </div>
+		        </div>
+                <div class="bag_bottom col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <button class="per_back" style="margin: 10px 30px;" onclick="window.history.go(-1)">BACK</button>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>

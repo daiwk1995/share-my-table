@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/s/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="/s/css/style.css"/>
+	    <link rel="stylesheet" href="/s/css/header.css"/>
+        <script src="/s/js/jquery.min.js"></script>
+        <script src="/s/js/bootstrap.min.js"></script>
+        <script src="/s/js/jquery-3.3.1.min.js"></script>
+        <script src="/s/js/js.cookie.js"></script>
+	    <script src="/s/js/routine.js"></script>
+	</head>
+    <body onload="second();">
+		<div class="container-fluid">
+
+                <div class="row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+             <div class="header row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                 <div class="logo">logo</div>
+                 <div class="menu">
+                     <a class="name" id="getuname" href="/person"></a>
+                     <a class="name" href="/second">Home</a>
+                     <button class="logout" onclick="logout();">
+                         <img style='width: 30px; height: 30px;' src='s/img/logout.png'/>
+                     </button>
+                 </div>
+             </div>
+         </div>
+
+            <div style="margin-top: 110px;">
+		        <div class="per_main col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+		    	    <div class="inventory">
+                        <span>ADD</span>
+                    </div>
+                    <hr/>
+                    <div class="">
+                        <span style="font-size: 18px;">Content:</span><br/>
+                        <textarea class="col-lg-12 col-xs-12 col-sm-12 row center-block" style="height: 200px;border-radius: 10px;border: 0px solid;text-align: center;background-color: #f7e1b5;font-size: 18px;" id="cont"></textarea>
+                        <button style='float: right;margin: 10px 10px auto auto;width: 100px;height: 50px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid;font-size: 18px;' onclick="messageadd()">Send</button>
+                        <button style='float: right;margin: 10px 5px auto auto;width: 100px;height: 50px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid;font-size: 18px;' onclick="history.go(-1);">Back</button>
+                   </div>
+		        </div>
+            </div>
+		</div>
+	</body>
+</html>

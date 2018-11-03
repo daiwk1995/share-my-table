@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/s/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="/s/css/style.css"/>
+	    <link rel="stylesheet" href="/s/css/header.css"/>
+        <script src="/s/js/jquery.min.js"></script>
+        <script src="/s/js/bootstrap.min.js"></script>
+        <script src="/s/js/jquery-3.3.1.min.js"></script>
+        <script src="/s/js/js.cookie.js"></script>
+	    <script src="/s/js/routine.js"></script>
+	</head>
+	<body onload="searchresult()">
+      <div class="container-fluid">
+          <div class="row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+              <div class="header row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                  <div class="logo">logo</div>
+                  <div class="menu">
+                      <a class="name" id="getuname" href="/person"></a>
+                      <a class="name" href="/second">Home</a>
+                      <button class="logout" onclick="logout();">
+                          <img style='width: 30px; height: 30px;' src='s/img/logout.png'/>
+                      </button>
+                  </div>
+              </div>
+              <div class="header row col-md-12 col-lg-12 col-xs-12 col-sm-12" style='margin-top: 70px; height: 40px; line-height: 40px;text-align: left'>
+                  <span style='margin-left: 10px;font-size: 24px;' id="seares">Search Result For :</span>
+              </div>
+          </div>
+          <div style="margin-top: 120px;margin-bottom: 30px;">
+              <div class="row" style="margin: 20px auto;">
+                  <div class="center-block sealist row"></div>
+              </div>
+              <button class="per_back" style="float: right; margin: 0px 30px 10px auto;" onclick="window.history.go(-1)">BACK</button>
+          </div>
+      </div>
+	</body>
+</html>

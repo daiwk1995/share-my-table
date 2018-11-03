@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/s/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="/s/css/style.css"/>
+	    <link rel="stylesheet" href="/s/css/header.css"/>
+        <script src="/s/js/jquery.min.js"></script>
+        <script src="/s/js/bootstrap.min.js"></script>
+        <script src="/s/js/jquery-3.3.1.min.js"></script>
+        <script src="/s/js/js.cookie.js"></script>
+	    <script src="/s/js/routine.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#hide").click(function(){
+                           console.log('hiding...');
+                    $("#p1").hide();
+
+                });
+                $("#show").click(function(){
+                             console.log('showing...');
+                    $("#p1").show();
+                });
+            });
+            function hs() {
+                $('#a1').toggle();
+
+               // if ($('#a1').hide()===true){
+               //     console.log($('#a1').style.display == 'none');
+                  //    console.log($('#a1').style.hide());
+               // }else {
+               //     console.log('hide over');
+               // }
+                if ($('p').show()===true){
+                    console.log('showing');
+                }else {
+                    console.log('show over');
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+    	<div class="container-fluid">
+            <div class="transparent">
+		    <div class="header">
+			    <div class="header-tra">
+				    <div class="logo">logo</div>
+				    <div class="menu">
+				    </div>
+                </div>
+		    </div>
+            </div>
+            <div style="margin-top: 80px;">
+                <div class="row" style="margin: 20px auto;">
+                     <div class="center-block">
+                         <div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row btn center-block' style='margin: 10px auto;background-color: #DEB887; border-radius: 10px; text-align: left'>
+                             <h3 style='margin-left: 10px;'>Haha</h3>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Calories：543</span></a>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Fat：54</span></a>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Protein: 78</span></a>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Rating: 54</span></a>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Sodium: 69</span></a>
+                             <button style='float: right;margin-right: 10px;width: 80px;height: 40px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid' onclick=''>Add</button>
+                         </div>
+
+                          <div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row btn center-block' style='margin: 10px auto;background-color: #DEB887; border-radius: 10px; text-align: left'>
+                             <h3 style='margin-left: 10px;'>Haha</h3>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Calories：543</span></a>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Fat：54</span></a>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Protein: 78</span></a>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Rating: 54</span></a>
+                             <a style='margin-left: 10px; color: whitesmoke;'><span>Sodium: 69</span></a>
+                             <button style='float: right;margin-right: 10px;width: 80px;height: 40px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid' onclick='hs()'>Add</button>
+                         </div>
+
+                          <div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row center-block' style='margin: 10px auto;background-color: #DEB887; border-radius: 10px; text-align: left'>
+                              <h3 style='margin-left: 10px;'>Haha</h3>
+                              <span style='margin-left: 10px; color: whitesmoke;'>Calories：543</span>
+                              <span style='margin-left: 10px; color: whitesmoke;'>Fat：54</span>
+                              <span style='margin-left: 10px; color: whitesmoke;'>Protein: 78</span>
+                              <span style='margin-left: 10px; color: whitesmoke;'>Rating: 54</span>
+                              <span style='margin-left: 10px; color: whitesmoke;'>Sodium: 69</span><br/>
+                              <button style='margin: 5px auto 10px 10px; color: whitesmoke;width: 100px;height: 25px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid' onclick='hs();'>ingredient<span class="caret"></span></button>
+                              <span id="a1" style='margin-left: 10px; color: whitesmoke;'>Rat: 69</span>
+                              <div>
+                                  <hr/>
+                                  <div style="margin-bottom: 10px;">
+                                      <span style='margin-left: 10px; color: whitesmoke;'>Fat：54</span>
+                                      <button style='float: right; margin-right: 10px;width: 50px;height: 20px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid' onclick='hs()'>Add</button>
+                                  </div>
+                                  <div style="margin-bottom: 10px;">
+                                      <span style='margin-left: 10px; color: whitesmoke;'>Fat：54</span>
+                                      <button style='float: right; margin-right: 10px;width: 50px;height: 20px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid' onclick='hs()'>Add</button>
+                                  </div>
+                              </div>
+                          </div>
+                     </div>
+
+
+                     <div class="page center-block row">
+                        <button class="pagefirst btn" onclick="recial('l')">First</button>
+                        <button class="pagelr btn" onclick="recial('n')">Last</button>
+                        <span class="pagenum">
+                            <span>Current </span>
+                            <span id="curPage">1</span>
+                            <span>/ </span>
+                            <span id="totalPage">10</span>
+                            <span>Pages</span>
+                        </span>
+                        <button class="pagelr btn" onclick="recial('m')">Next</button>
+                        <button class="pageend btn" onclick="recial('q')">End</button>
+                    </div>
+                </div>
+                <div class="">
+               <p id="p1">如果点击“隐藏”按钮，我就会消失。</p>
+                    <button id="hide">隐藏</button>
+                    <button id="show">显示</button>
+                </div>
+            </div>
+	    </div>
+    </body>
+</html>

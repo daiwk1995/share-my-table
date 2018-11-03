@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/s/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="/s/css/style.css"/>
+	    <link rel="stylesheet" href="/s/css/header.css"/>
+        <script src="/s/js/jquery.min.js"></script>
+        <script src="/s/js/bootstrap.min.js"></script>
+        <script src="/s/js/jquery-3.3.1.min.js"></script>
+        <script src="/s/js/js.cookie.js"></script>
+	    <script src="/s/js/routine.js"></script>
+	</head>
+	<body onload="second();">
+		<div class="container-fluid">
+
+         <div class="row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+             <div class="header row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                 <div class="logo">logo</div>
+                 <div class="menu">
+                     <a class="name" id="getuname" href="/person"></a>
+                     <button class="logout" onclick="logout();">
+                         <img style='width: 30px; height: 30px;' src='s/img/logout.png'/>
+                     </button>
+                 </div>
+             </div>
+         </div>
+
+            <div class="row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+		    	<div class="sec_btn_g center-block">
+		    	    <button class="sec_btn" onclick="window.location.href='/invitation'">INVITATION</button>
+		    	    <button class="sec_btn" onclick="window.location.href='/search'">SEARCH BY RECIPE NAME</button>
+                    <button class="sec_btn" onclick="window.location.href='/bag'">SEARCH FROM BAG ITEM</button>
+                </div>
+		    </div>
+		</div>
+	</body>
+</html>

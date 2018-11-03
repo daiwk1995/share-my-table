@@ -1,0 +1,39 @@
+.header{
+	height: 70px;
+	background-color: rgba(190,160,110,0.7);
+   	position: fixed;
+    z-index: 1;
+}
+
+.logo{
+	position: relative;
+	float: left;
+	margin: 10px auto auto 20px;
+	width: 50px;
+	height: 50px;
+	font-size: 35px;
+}
+
+.menu{
+	position: relative;
+	float: right;
+	margin: 20px 20px;
+	width: auto;
+	height: 30px;
+}
+
+.name{
+	position: relative;
+	color: white;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.logout{
+	position: relative;
+	color: white;
+	font-size: 20px;
+	width: 42px;
+	background-color: transparent;
+	border: 0px;
+	/*margin-right: 10px;*/
+}

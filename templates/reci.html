@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/s/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="/s/css/style.css"/>
+	    <link rel="stylesheet" href="/s/css/header.css"/>
+        <script src="/s/js/jquery.min.js"></script>
+        <script src="/s/js/bootstrap.min.js"></script>
+        <script src="/s/js/jquery-3.3.1.min.js"></script>
+        <script src="/s/js/js.cookie.js"></script>
+	    <script src="/s/js/routine.js"></script>
+	</head>
+	<body onload="recial(1);">
+		<div class="container-fluid">
+
+         <div class="row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+             <div class="header row col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                 <div class="logo">logo</div>
+                 <div class="menu">
+                     <a class="name" id="getuname" href="/person"></a>
+                     <a class="name" href="/second">Home</a>
+                     <button class="logout" onclick="logout();">
+                         <img style='width: 30px; height: 30px;' src='s/img/logout.png'/>
+                     </button>
+                 </div>
+             </div>
+         </div>
+
+            <div style="margin-top: 80px;">
+                <div class="row" style="margin: 20px auto;">
+                    <div class="center-block reclist"></div>
+                    <div class="page">
+                        <button class="pagefirst btn" onclick="recial('l')"><img style='margin: 0; width: 100%; height: 100%;' src='s/img/first.png'/></button>
+                        <button class="pagelr btn" onclick="recial('n')"><img style='margin: 0; width: 100%; height: 100%;' src='s/img/last.png'/></button>
+                        <span class="pagenum">
+                            <span>Current </span>
+                            <span id="curPage">1</span>
+                            <span>/ </span>
+                            <span id="totalPage">1</span>
+                            <span>Pages</span>
+                        </span>
+                        <button class="pagelr btn" onclick="recial('m')"><img style='margin: 0; width: 100%; height: 100%;' src='s/img/next.png'/></button>
+                        <button class="pageend btn" onclick="recial('q')"><img style='margin: 0; width: 100%; height: 100%;' src='s/img/end.png'/></button>
+                    </div>
+                </div>
+            </div>
+	    </div>
+	</body>
+</html>
