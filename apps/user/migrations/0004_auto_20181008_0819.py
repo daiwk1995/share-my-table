@@ -16,26 +16,26 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='bagitemmodel',
             name='expire_time',
-            field=models.DateTimeField(blank=True, help_text='食材过期的时间', null=True),
+            field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='ingredients',
-            field=models.ForeignKey(help_text='单项食材', on_delete=django.db.models.deletion.CASCADE, to='food.IngredientModel'),
+            field=models.ForeignKey( on_delete=django.db.models.deletion.CASCADE, to='food.IngredientModel'),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='inputted_time',
-            field=models.DateTimeField(default=datetime.datetime.now, help_text='该项食材录入bag的时间'),
+            field=models.DateTimeField(default=datetime.datetime.now),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='user',
-            field=models.ForeignKey(help_text='该Bag的用户', on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='weight',
-            field=models.FloatField(help_text='食材的数量'),
+            field=models.FloatField(),
         ),
     ]

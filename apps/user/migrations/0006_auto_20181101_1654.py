@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='bagitemmodel',
             name='expire_time',
-            field=models.DateField(blank=True, help_text='食材过期的日期', null=True),
+            field=models.DateField(blank=True,null=True),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='inputted_time',
-            field=models.DateField(auto_now=True, help_text='该项食材录入bag的日期'),
+            field=models.DateField(auto_now=True),
         ),
     ]

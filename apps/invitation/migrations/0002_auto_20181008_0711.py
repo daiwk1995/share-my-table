@@ -16,21 +16,21 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='answermodel',
             name='user',
-            field=models.ForeignKey(help_text='回复帖子的用户', on_delete=django.db.models.deletion.CASCADE, related_name='answer_user', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='answer_user', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='messagemodel',
             name='content',
-            field=models.TextField(help_text='帖子的内容'),
+            field=models.TextField(),
         ),
         migrations.AlterField(
             model_name='messagemodel',
             name='created_time',
-            field=models.DateTimeField(default=datetime.datetime.now, help_text='发帖时间'),
+            field=models.DateTimeField(default=datetime.datetime.now),
         ),
         migrations.AlterField(
             model_name='messagemodel',
             name='user',
-            field=models.ForeignKey(help_text='发送帖子的用户', on_delete=django.db.models.deletion.CASCADE, related_name='created_user', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='created_user', to=settings.AUTH_USER_MODEL),
         ),
     ]

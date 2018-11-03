@@ -15,21 +15,21 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='answermodel',
             name='answer_to',
-            field=models.ForeignKey(blank=True, default=None, help_text='指向帖子中的回复, 表示回复帖子下的某条回复，null时表示仅回复该条帖子', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='answer_answered', to='invitation.AnswerModel'),
+            field=models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='answer_answered', to='invitation.AnswerModel'),
         ),
         migrations.AlterField(
             model_name='answermodel',
             name='content',
-            field=models.TextField(help_text='回复的内容'),
+            field=models.TextField(),
         ),
         migrations.AlterField(
             model_name='answermodel',
             name='created_time',
-            field=models.DateTimeField(default=datetime.datetime.now, help_text='回复的时间'),
+            field=models.DateTimeField(default=datetime.datetime.now),
         ),
         migrations.AlterField(
             model_name='answermodel',
             name='message',
-            field=models.ForeignKey(help_text='被回复的帖子', on_delete=django.db.models.deletion.CASCADE, related_name='message_answered', to='invitation.MessageModel'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='message_answered', to='invitation.MessageModel'),
         ),
     ]

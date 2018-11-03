@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='bagitemmodel',
             name='ingredients',
-            field=models.ForeignKey(help_text='单项食材', on_delete=django.db.models.deletion.CASCADE,
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
                                     to='food.CategoryModel'),
         ),
     ]
