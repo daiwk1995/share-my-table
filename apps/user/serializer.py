@@ -50,7 +50,7 @@ class UserDetailSerializer(srs.ModelSerializer):
 
 class UserRegSerializer(srs.ModelSerializer):
     username = srs.CharField(required=True, allow_blank=False, validators=[UniqueValidator(
-        queryset=UserProfile.objects.all(), message="用户已存在")])
+        queryset=UserProfile.objects.all(), message="user already exists")])
     password = srs.CharField(allow_blank=False, max_length=16, min_length=6, write_only=True,
                              style={'input_type': 'password'})
     first_name = srs.CharField(required=True, max_length=20)
