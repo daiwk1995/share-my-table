@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-
+#front webpage
 def index(request):
     return render(request, "index.html")
 

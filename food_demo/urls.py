@@ -26,12 +26,12 @@ urlpatterns = [
     # REST API
     path('docs/', include_docs_urls(title="Food Demo", )),
 
-    # each module's entry url
+    # variable model url
     path('invitation/', include(('invitation.urls', 'invitation'), namespace='invitation')),
     path('food/', include(('food.urls', 'food'), namespace='food')),
     path('user/', include(('user.urls', 'user'), namespace='user')),
 
-    # / view
+    # / direct view
     path('', views.index),
     path('addbagitem', views.addbagitem),
     path('addmessage', views.addmessage),
