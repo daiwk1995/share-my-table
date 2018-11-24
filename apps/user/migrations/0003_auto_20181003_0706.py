@@ -4,6 +4,9 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+    """
+    Update rules for the user's gender
+    """
 
     dependencies = [
         ('user', '0002_auto_20180930_0147'),

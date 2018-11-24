@@ -4,6 +4,11 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+    """
+    Define operations of:
+    1. update expiration time of an item in bag
+    2. update input date of an item in bag
+    """
 
     dependencies = [
         ('user', '0005_auto_20181024_1420'),
@@ -13,11 +18,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='bagitemmodel',
             name='expire_time',
-            field=models.DateField(blank=True,null=True),
+            field=models.DateField(blank=True, help_text='item expiration date', null=True),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='inputted_time',
-            field=models.DateField(auto_now=True),
+            field=models.DateField(auto_now=True, help_text='item input date'),
         ),
     ]

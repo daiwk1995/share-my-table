@@ -7,6 +7,15 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
+    """
+    Define operation of:
+    updating item expiration date
+    updating item in bage
+    updating bag entry date
+    updating user associated with the bag 
+    updating quantities of item in bag
+    """
+
 
     dependencies = [
         ('user', '0003_auto_20181003_0706'),
@@ -16,26 +25,26 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='bagitemmodel',
             name='expire_time',
-            field=models.DateTimeField(blank=True, null=True),
+            field=models.DateTimeField(blank=True, help_text='update item expiration date', null=True),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='ingredients',
-            field=models.ForeignKey( on_delete=django.db.models.deletion.CASCADE, to='food.IngredientModel'),
+            field=models.ForeignKey(help_text='item', on_delete=django.db.models.deletion.CASCADE, to='food.IngredientModel'),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='inputted_time',
-            field=models.DateTimeField(default=datetime.datetime.now),
+            field=models.DateTimeField(default=datetime.datetime.now, help_text='item bag entry date'),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(help_text='user associated with the bag', on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='bagitemmodel',
             name='weight',
-            field=models.FloatField(),
+            field=models.FloatField(help_text='quantity'),
         ),
     ]

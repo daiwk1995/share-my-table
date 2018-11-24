@@ -7,6 +7,11 @@ import django.utils.timezone
 
 
 class Migration(migrations.Migration):
+    """
+    Specify attributes of newly created user.
+    Fields to store for an user and flag of access level.
+    Basic information fields about the user and automatically generated system fields such as the user's sign up date.
+    """
 
     initial = True
 

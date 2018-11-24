@@ -5,6 +5,9 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+    """
+    Alter ingredients field in the bag
+    """
     dependencies = [
         ('user', '0004_auto_20181008_0819'),
     ]
@@ -13,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='bagitemmodel',
             name='ingredients',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+            field=models.ForeignKey(help_text='item', on_delete=django.db.models.deletion.CASCADE,
                                     to='food.CategoryModel'),
         ),
     ]
