@@ -1,3 +1,6 @@
+"""
+Declare responses of the User class.
+"""
 from rest_framework import serializers as srs
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.validators import UniqueValidator
@@ -5,13 +8,17 @@ from rest_framework.validators import UniqueValidator
 from food.serializer import CategorySerializer
 from .models import *
 
-
+"""
+Declare fields required for sign-up.
+"""
 class UserIntroSerializer(srs.ModelSerializer):
     class Meta:
         model = UserProfile
         fields = ['id', 'username', 'first_name', 'last_name']
 
-
+"""
+Declare password storage and update rules.
+"""
 class PasswordSerializer(srs.ModelSerializer):
     old_password = srs.CharField(allow_blank=False, max_length=16, min_length=6, write_only=True,
                                  style={'input_type': 'password'})
@@ -29,7 +36,9 @@ class PasswordSerializer(srs.ModelSerializer):
         model = UserProfile
         fields = ['old_password', 'new_password']
 
-
+"""
+Fields requried for user login.
+"""
 class UserLoginSerializer(srs.ModelSerializer, AuthTokenSerializer):
     username = srs.CharField(required=True, help_text="username")
     password = srs.CharField(allow_blank=False, max_length=16, min_length=6, write_only=True,
@@ -39,7 +48,9 @@ class UserLoginSerializer(srs.ModelSerializer, AuthTokenSerializer):
         model = UserProfile
         fields = ['username', 'password']
 
-
+"""
+Declare fields of user information.
+"""
 class UserDetailSerializer(srs.ModelSerializer):
     username = srs.CharField(read_only=True)
 
@@ -47,10 +58,13 @@ class UserDetailSerializer(srs.ModelSerializer):
         model = UserProfile
         fields = ['username', 'first_name', 'last_name', 'birthday', 'gender', 'email']
 
-
+"""
+User registration rules.
+Providing user update and storage mechanism.
+"""
 class UserRegSerializer(srs.ModelSerializer):
     username = srs.CharField(required=True, allow_blank=False, validators=[UniqueValidator(
-        queryset=UserProfile.objects.all(), message="user already exists")])
+        queryset=UserProfile.objects.all(), message="User exists!")])
     password = srs.CharField(allow_blank=False, max_length=16, min_length=6, write_only=True,
                              style={'input_type': 'password'})
     first_name = srs.CharField(required=True, max_length=20)
@@ -66,7 +80,11 @@ class UserRegSerializer(srs.ModelSerializer):
         model = UserProfile
         fields = ['username', 'password', 'first_name', 'last_name']
 
-
+"""
+Display for items in the bag.
+Specify fields to display for each item in the bag.
+Item list view in bag.
+"""
 class BagListSerializer(srs.ModelSerializer):
     user = srs.HiddenField(
         default=srs.CurrentUserDefault(), write_only=True
@@ -79,7 +97,10 @@ class BagListSerializer(srs.ModelSerializer):
         model = BagItemModel
         fields = ['id', 'user', 'weight', 'inputted_time', 'expire_time', 'ingredients']
 
-
+"""
+Data fields for each item.
+Stores item inputted time and expiration date
+"""
 class BagSerializer(srs.ModelSerializer):
     user = srs.HiddenField(
         default=srs.CurrentUserDefault(), write_only=True
