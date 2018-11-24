@@ -4,7 +4,7 @@ import datetime
 from django.db import migrations, models
 import django.db.models.deletion
 
-
+# delte the answer message
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -15,21 +15,21 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='answermodel',
             name='answer_to',
-            field=models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='answer_answered', to='invitation.AnswerModel'),
+            field=models.ForeignKey(blank=True, default=None, help_text='direct to a specific reply, reply to a reply，null means reply the post', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='answer_answered', to='invitation.AnswerModel'),
         ),
         migrations.AlterField(
             model_name='answermodel',
             name='content',
-            field=models.TextField(),
+            field=models.TextField(help_text='reply content'),
         ),
         migrations.AlterField(
             model_name='answermodel',
             name='created_time',
-            field=models.DateTimeField(default=datetime.datetime.now),
+            field=models.DateTimeField(default=datetime.datetime.now, help_text='reply time'),
         ),
         migrations.AlterField(
             model_name='answermodel',
             name='message',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='message_answered', to='invitation.MessageModel'),
+            field=models.ForeignKey(help_text='post', on_delete=django.db.models.deletion.CASCADE, related_name='message_answered', to='invitation.MessageModel'),
         ),
     ]

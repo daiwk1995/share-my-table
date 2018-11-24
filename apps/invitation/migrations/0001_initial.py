@@ -5,7 +5,7 @@ from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
 
-
+# add the post or answer
 class Migration(migrations.Migration):
 
     initial = True
@@ -33,6 +33,7 @@ class Migration(migrations.Migration):
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='created_user', to=settings.AUTH_USER_MODEL)),
             ],
         ),
+        # add the answer
         migrations.AddField(
             model_name='answermodel',
             name='message',
