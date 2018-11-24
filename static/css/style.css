@@ -280,7 +280,7 @@ ul li{
 .per_main{
     position: relative;
 	height: 560px;
-	background-color: rgba(190,160,110,0.7);
+	background-color: rgba(190,160,110,0.6);
 	border-radius: 20px;
 	border: 2px solid antiquewhite;
 }
@@ -381,6 +381,19 @@ ul li{
     font-size: 20px;
 }
 
+.per_search{
+	float: right;
+	margin: 10px 30px;
+    height: 45px;
+    width: 120px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid burlywood;
+    color: #C0A16B;
+    font-size: 20px;
+}
+
+
 .add_btn{
 	float: right;
 	margin-right: 10px;
@@ -396,5 +409,25 @@ ul li{
 	height: 80px;
 }
 
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    vertical-align:middle;
+    margin-top:0;
+    background:#fff;
+    border:#999 solid 1px;
+    border-radius: 3px;
+	width: 20px;
+	height: 20px;
+    min-height: 12px;
+    min-width: 12px;
+}
+input[type="checkbox"]:checked {
+    background: #8d8f6b;
+}
+
+input[type=checkbox]:checked::after{
+
+}
 
 

@@ -7,10 +7,10 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-"""
-Create an item to store in the bag.
-Create a bag for the newly created user.
-"""
+    """
+    Create an item to store in the bag.
+    Create a bag for the newly created user.
+    """
     dependencies = [
         ('food', '0003_auto_20180930_0147'),
         ('user', '0001_initial'),
