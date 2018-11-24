@@ -3,7 +3,9 @@
 from django.db import migrations, models
 import django.db.models.deletion
 
-
+"""
+    Create model, add field
+"""
 class Migration(migrations.Migration):
 
     initial = True
@@ -12,6 +14,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        # create CategoryModel
         migrations.CreateModel(
             name='CategoryModel',
             fields=[
@@ -19,6 +22,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=256, unique=True)),
             ],
         ),
+        # create DirectionModel
         migrations.CreateModel(
             name='DirectionModel',
             fields=[
@@ -26,6 +30,7 @@ class Migration(migrations.Migration):
                 ('detail', models.CharField(max_length=512)),
             ],
         ),
+        # create IngredientModel
         migrations.CreateModel(
             name='IngredientModel',
             fields=[
@@ -33,6 +38,7 @@ class Migration(migrations.Migration):
                 ('detail', models.CharField(max_length=256)),
             ],
         ),
+        # create RecipeModel
         migrations.CreateModel(
             name='RecipeModel',
             fields=[
@@ -52,6 +58,7 @@ class Migration(migrations.Migration):
                 'verbose_name': 'Recipe',
             },
         ),
+        # add field to directionModel
         migrations.AddField(
             model_name='directionmodel',
             name='recipe',

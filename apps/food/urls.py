@@ -3,6 +3,9 @@ from rest_framework.routers import DefaultRouter
 
 from .views import *
 
+"""
+    wire view logic to a set of URLs 
+"""
 router = DefaultRouter()
 router.register(r'recipes', RecipeListViewSet, base_name="recipes")
 router.register(r'recipes', RecipeViewSet, base_name='recipes')

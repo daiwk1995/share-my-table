@@ -2,7 +2,7 @@ import django_filters
 
 from food.models import *
 
-
+# filter recipe by rating, calories, protein, fat and sodium
 class RecipeFilter(django_filters.FilterSet):
     min_rating = django_filters.NumberFilter('rating', lookup_expr='gte')
     max_rating = django_filters.NumberFilter('rating', lookup_expr='lte')

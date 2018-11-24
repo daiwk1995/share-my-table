@@ -2,7 +2,9 @@
 
 from django.db import migrations, models
 
-
+"""
+    Add field to directionmodel
+"""
 class Migration(migrations.Migration):
 
     dependencies = [

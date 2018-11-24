@@ -5,67 +5,80 @@ import datetime
 import django.db.models.deletion
 from django.db import migrations, models
 
-
+"""
+    Alter field
+"""
 class Migration(migrations.Migration):
     dependencies = [
         ('food', '0003_auto_20180930_0147'),
     ]
 
     operations = [
+        # alter field in categorymodel
         migrations.AlterField(
             model_name='categorymodel',
             name='name',
-            field=models.CharField(max_length=256, unique=True),
+            field=models.CharField(help_text="Ingredient name", max_length=256, unique=True),
         ),
+        # alter field in
         migrations.AlterField(
             model_name='directionmodel',
             name='detail',
-            field=models.CharField(max_length=512),
+            field=models.CharField(help_text="details of this step", max_length=512),
         ),
+        # alter field in
         migrations.AlterField(
             model_name='directionmodel',
             name='recipe',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+            field=models.ForeignKey(help_text="recipe name", on_delete=django.db.models.deletion.CASCADE,
                                     related_name='directions', to='food.RecipeModel'),
         ),
+        # alter field in directionmodel
         migrations.AlterField(
             model_name='directionmodel',
             name='sequence',
-            field=models.IntegerField(),
+            field=models.IntegerField(help_text="sequence of steps"),
         ),
+        # alter field in ingredientmodel
         migrations.AlterField(
             model_name='ingredientmodel',
             name='detail',
-            field=models.CharField(max_length=256),
+            field=models.CharField(help_text="Ingredient details", max_length=256),
         ),
+        # alter field in recipemodel
         migrations.AlterField(
             model_name='recipemodel',
             name='categories',
-            field=models.ManyToManyField(to='food.CategoryModel'),
+            field=models.ManyToManyField(help_text="recipe", to='food.CategoryModel'),
         ),
+        # alter field in recipemodel
         migrations.AlterField(
             model_name='recipemodel',
             name='date',
-            field=models.DateTimeField(default=datetime.datetime.now, help_text='添加的时间'),
+            field=models.DateTimeField(default=datetime.datetime.now, help_text='added time'),
         ),
+        # alter field in recipemodel
         migrations.AlterField(
             model_name='recipemodel',
             name='desc',
-            field=models.CharField(blank=True,max_length=512, null=True),
+            field=models.CharField(blank=True, help_text="details", max_length=512, null=True),
         ),
+        # alter field in recipemodel
         migrations.AlterField(
             model_name='recipemodel',
             name='ingredients',
-            field=models.ManyToManyField(to='food.IngredientModel'),
+            field=models.ManyToManyField(help_text="Ingredient details", to='food.IngredientModel'),
         ),
+        # alter field in recipe model
         migrations.AlterField(
             model_name='recipemodel',
             name='r_id',
-            field=models.AutoField(primary_key=True, serialize=False),
+            field=models.AutoField(help_text="recipe id", primary_key=True, serialize=False),
         ),
+        # alter field in recipemodel
         migrations.AlterField(
             model_name='recipemodel',
             name='title',
-            field=models.CharField(max_length=256, unique=True),
+            field=models.CharField(help_text="recipe name", max_length=256, unique=True),
         ),
     ]

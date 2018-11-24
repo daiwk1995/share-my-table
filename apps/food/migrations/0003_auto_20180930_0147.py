@@ -3,7 +3,9 @@
 import datetime
 from django.db import migrations, models
 
-
+"""
+    Remove field, add field and alter field
+"""
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -11,21 +13,25 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        # remove field from recipemodel
         migrations.RemoveField(
             model_name='recipemodel',
             name='id',
         ),
+        # add field to recipemodel
         migrations.AddField(
             model_name='recipemodel',
             name='r_id',
             field=models.AutoField(default=1, primary_key=True, serialize=False),
             preserve_default=False,
         ),
+        # alter field in recipemodel
         migrations.AlterField(
             model_name='recipemodel',
             name='date',
             field=models.DateTimeField(default=datetime.datetime.now),
         ),
+        # alter field in recipemodel
         migrations.AlterField(
             model_name='recipemodel',
             name='desc',

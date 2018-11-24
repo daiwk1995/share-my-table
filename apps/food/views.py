@@ -13,6 +13,9 @@ from .models import CategoryModel, RecipeModel
 
 
 class CategoryListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+        A ViewSet for listing categories
+    """
     queryset = CategoryModel.objects.all()
     serializer_class = CategorySerializer
     pagination_class = MyPageNumberPagination
@@ -23,11 +26,17 @@ class CategoryListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
 
 
 class CategoryViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+    """
+        A ViewSet for listing categories
+    """
     queryset = CategoryModel.objects.all()
     serializer_class = CategorySerializer
 
 
 class IngredientListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+        A ViewSet for listing ingredient list
+    """
     queryset = IngredientModel.objects.all()
     serializer_class = IngredientSerializer
     pagination_class = MyPageNumberPagination
@@ -38,11 +47,17 @@ class IngredientListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
 
 
 class IngredientViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+    """
+        A ViewSet for listing ingredients
+    """
     queryset = IngredientModel.objects.all()
     serializer_class = IngredientSerializer
 
 
 class RecipeListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+        A ViewSet for listing recipes list
+    """
     queryset = RecipeModel.objects.all()
     serializer_class = RecipeListSerializer
     pagination_class = MyPageNumberPagination
@@ -54,6 +69,9 @@ class RecipeListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
 
 
 class RecipeViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+    """
+        A ViewSet for listing recipes
+    """
     queryset = RecipeModel.objects.all()
     serializer_class = RecipeDetailSerializer
 
