@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from .serializer import *
 from util.pagination import MyPageNumberPagination
 
-
+# the class just receive all the message that post by user
 class MessageListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = MessageModel.objects.all()
     serializer_class = MessageListSerializer
@@ -17,7 +17,7 @@ class MessageListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     ordering_fields = ['id', 'created_time']
     ordering = ('id',)
 
-
+# view the message content
 class MessageViewSet(mixins.CreateModelMixin, mixins.DestroyModelMixin, viewsets.GenericViewSet):
     serializer_class = MessageCreateSerializer
     authentication_classes = (TokenAuthentication, )
@@ -26,7 +26,7 @@ class MessageViewSet(mixins.CreateModelMixin, mixins.DestroyModelMixin, viewsets
     def get_queryset(self):
         return MessageModel.objects.filter(user=self.request.user)
 
-
+#view the answer content
 class AnswerViewSet(mixins.CreateModelMixin, mixins.DestroyModelMixin, viewsets.GenericViewSet):
     serializer_class = AnswerDetailSerializer
     authentication_classes = (TokenAuthentication, )

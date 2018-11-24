@@ -5,7 +5,7 @@ from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
 
-
+#delete the message or answer
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -16,21 +16,21 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='answermodel',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='answer_user', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(help_text='reply user', on_delete=django.db.models.deletion.CASCADE, related_name='answer_user', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='messagemodel',
             name='content',
-            field=models.TextField(),
+            field=models.TextField(help_text='post content'),
         ),
         migrations.AlterField(
             model_name='messagemodel',
             name='created_time',
-            field=models.DateTimeField(default=datetime.datetime.now),
+            field=models.DateTimeField(default=datetime.datetime.now, help_text='post time'),
         ),
         migrations.AlterField(
             model_name='messagemodel',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='created_user', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(help_text='post user', on_delete=django.db.models.deletion.CASCADE, related_name='created_user', to=settings.AUTH_USER_MODEL),
         ),
     ]
