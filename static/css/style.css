@@ -364,7 +364,15 @@ ul li{
 .per_main{
     position: relative;
 	height: 560px;
-	background-color: rgba(190,160,110,0.6);
+	background-image: url('../img/personal.jpg');
+	background-size: cover;
+	border-radius: 20px;
+	border: 0px solid antiquewhite;
+}
+.per_main_search{
+    position: relative;
+	height: 560px;
+	background-color: #FFA100;
 	border-radius: 20px;
 	border: 0px solid antiquewhite;
 }

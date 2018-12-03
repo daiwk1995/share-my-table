@@ -131,7 +131,7 @@
                                 str += "<input id='weight";
                                 str += data.results[i].ingredients[j].id;
                                 str += "' style='float: right; margin-right: 30px;width: 70px;height: 20px;background-color: whitesmoke;border-radius: 5px;border: 0px solid;text-align: center;' type='number' id='setweight'/>";
-                                str += "<span style='float: right;margin-right: 10px;'>Weight: </span></div>";
+                                str += "<span style='float: right;margin-right: 10px;'>Quantity: </span></div>";
                             }
                             str += "</div></div>";
                         }
@@ -327,22 +327,22 @@
         var str = '';
         str += "<tr style='font-size: 18px;font-weight: 700;'>";
 
-        str += "<th class='row col-lg-offset-1 col-md-offset-1 col-lg-3 col-md-3' style='text-align: center;'>NAME</th>";  // col-lg-offset-1 col-md-offset-1
-        str += "<th class='row col-lg-3 col-md-3' style='text-align: center;'>EXPIRE TIME</th>";
-        str += "<th class='row col-lg-2 col-md-2' style='text-align: center;'>WEIGHT</th>";
+        str += "<th class='row col-lg-offset-1 col-md-offset-1 col-lg-3 col-md-3' style='text-align: center;'>Name</th>";  // col-lg-offset-1 col-md-offset-1
+        str += "<th class='row col-lg-3 col-md-3' style='text-align: center;'>Expire Time</th>";
+        str += "<th class='row col-lg-2 col-md-2' style='text-align: center;'>Quantity</th>";
         str += "<th class='row col-lg-2 col-md-2' style='text-align: center;'></th>";
         str += "<th class='row col-lg-1 col-md-1'>";
-        str += "<button style='width: 35px; height: 25px; border: 0px; background-color:transparent;' onclick='bagadditemframe()'><img style='width: 25px; height: 25px;' src='s/img/add.png'/></button></th></tr>";
+        str += "<button style='width: 35px; height: 25px; border: 0px; background-color:transparent; margin-left: 25px;' onclick='bagadditemframe()'><img style='width: 25px; height: 25px;' src='s/img/add.png'/></button></th></tr>";
 
         // width: 120px; border: 1px solid wheat; border-radius: 5px; color: #8a6d3b; text-align: center;
 
         str += "<tr id='bagadditem' style='display: none; font-size: 16px; text -align: center; height: 45px;'>";
         str += "<td class='row col-lg-offset-1 col-md-offset-1 col-lg-3 col-md-3'>";
-        str += "<input id='bagaddname' type='text' style='width: 120px; border: 1px solid wheat; border-radius: 5px; color: #8a6d3b; text-align: center;'/>"
+        str += "<input id='bagaddname' type='text' style='margin-left: 110px;width: 120px; border: 1px solid wheat; border-radius: 5px; color: #8a6d3b; text-align: center;'/>"
         str += "</td><td class='row col-lg-3 col-md-3'>";
-        str += "<input id='bagaddtime' type='date' style='width: 120px; border: 1px solid wheat; border-radius: 5px; color: #8a6d3b; text-align: center;'/>"
+        str += "<input id='bagaddtime' type='date' style='margin-left: 95px; width: 150px; border: 1px solid wheat; border-radius: 5px; color: #8a6d3b; text-align: center;'/>"
         str += "</td><td class='row col-lg-2 col-md-2'>";
-        str += "<input id='bagaddweight' type='number' style='width: 120px; border: 1px solid wheat; border-radius: 5px; color: #8a6d3b; text-align: center;'/>"
+        str += "<input id='bagaddweight' type='number' style='margin-left: 50px;width: 120px; border: 1px solid wheat; border-radius: 5px; color: #8a6d3b; text-align: center;'/>"
         str += "</td><td class='row col-lg-2 col-md-2'>";
         str += "<button style='float: right; width: 50px; height: 30px; border: 0px; background-color: transparent;' onclick='bagadditemframe()'><img style='width: 25px; height: 25px;' src='s/img/over.png'/></button>";
         str += "<button style='float: right; margin-right: 10px; width: 50px; height: 30px; border: 0px; background-color: transparent;' onclick='bagadditem()'><img style='width: 25px; height: 25px;' src='s/img/save.png'/></button>";
@@ -1041,16 +1041,16 @@
 
     function setting() {
         $('#setting').find('*').remove();
-        $('#setting').append("<div class='inventory'>Personal Setting</div><hr/>" +
-            "<div><div style='24px;'>Reset Password: </div><br/>" +
-            "<div style='margin: 10px auto;width: 300px;height: auto;'>" +
-            "<span>Old Passwords:</span><br/><input class='repasswd center-block' type='password' id='oldpwd' value=''/></div>" +
+        $('#setting').append("<div class='inventory' style='font-size: 32px; color: #000000'>Personal Setting</div><hr/>" +
+            "<div><div style='font-size: 24px; color: #000000'>Reset Password </div><br/>" +
+            "<div style='margin: 10px auto;width: 300px;height: auto; color: #000000; '>" +
+            "<span>Old Password:</span><br/><input class='repasswd center-block' type='password' id='oldpwd' value=''/></div>" +
 
-            "<div style='margin: 10px auto;width: 300px;height: auto;'>" +
-            "<span>New Passwords:</span><br/><input class='repasswd center-block' type='password' id='newpwd' value=''/></div>" +
+            "<div style='margin: 10px auto;width: 300px;height: auto; color: #000000;'>" +
+            "<span>New Password:</span><br/><input class='repasswd center-block' type='password' id='newpwd' value=''/></div>" +
 
-            "<div style='margin: 10px auto;width: 300px;height: auto;'>" +
-            "<span>Re Enter:</span><br/><input class='repasswd center-block' type='password' id='repwd' value=''/></div>" +
+            "<div style='margin: 10px auto;width: 300px;height: auto; color: #000000;'>" +
+            "<span>ReEnter:</span><br/><input class='repasswd center-block' type='password' id='repwd' value=''/></div>" +
 
             "<button class='cancel_btn' onclick='repassword(1)'>Save</button></div>" +
             "<button class='save_btn' onclick='window.location.reload();'>Cancel</button></div>"
