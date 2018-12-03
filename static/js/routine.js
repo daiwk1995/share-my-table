@@ -1052,8 +1052,8 @@
             "<div style='margin: 10px auto;width: 300px;height: auto;'>" +
             "<span>Re Enter:</span><br/><input class='repasswd center-block' type='password' id='repwd' value=''/></div>" +
 
-            "<button style=' float:right;margin:30px 10px auto auto;height: 45px;width: 100px;background-color: white;border-radius: 10px;border: 2px solid burlywood;color: #C0A16B;font-size: 20px;' onclick='repassword(1)'>Save</button></div>" +
-            "<button style=' float:right;margin:30px 10px auto auto;height: 45px;width: 100px;background-color: white;border-radius: 10px;border: 2px solid burlywood;color: #C0A16B;font-size: 20px;' onclick='window.location.reload();'>Cancel</button></div>"
+            "<button class='cancel_btn' onclick='repassword(1)'>Save</button></div>" +
+            "<button class='save_btn' onclick='window.location.reload();'>Cancel</button></div>"
         );
     };
 

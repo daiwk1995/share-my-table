@@ -239,9 +239,9 @@ ul li{
 	border: none;
 	color: #FFFFFF;
 	text-align: center;
-	font-size: 28px;
+	font-size: 20px;
 	padding: 0px;
-	width: 150px;
+	width: 120px;
 	height: 45px;
 	transition: all 0.5s;
 	cursor: pointer;
@@ -393,7 +393,7 @@ ul li{
 	width: 90%;
 	font-size: 25px;
 	text-align: center;
-	
+
 }
 
 .page{
@@ -438,7 +438,7 @@ ul li{
 	height: 40px;
 	width: 300px;
 	border-radius: 10px;
-	border: 2px solid burlywood;
+	border: 2px solid #9B8300;
     color: #444444;
 	font-size: 20px;
 	text-align: center;
@@ -449,14 +449,59 @@ ul li{
     margin-top: 30px;
 	height: 45px;
 	width: 200px;
-	background-color: white;
+	background-color: #9B8300;
 	border-radius: 10px;
-	border: 2px solid burlywood;
-	color: #C0A16B;
+	border: 0px solid burlywood;
+	color: #FFFFFF;
 	font-size: 16px;
-
+	transition: all 0.5s;
 }
-
+.person_btn:hover{
+	background-color: #B0A777;
+}
+.person_setting{
+	height: 45px;
+	width: auto;
+	background-color: #9B8300;
+	border-radius: 10px; 
+	border: 0px solid burlywood;
+	color: #FFFFFF;
+	font-size: 16px; 
+	transition: all 0.5s;
+}
+.person_setting:hover {
+	background-color: #B0A777
+}
+.cancel_btn{
+	float:right;
+	margin:30px 10px auto auto;
+	height: 45px;
+	width: 100px;
+	background-color: #9B8300;
+	border-radius: 10px;
+	border: 0px solid burlywood;
+	color: #FFFFFF;
+	font-size: 20px;
+	transition: all 0.5s;
+}
+.cancel_btn:hover{
+	background-color: #B0A777;
+}
+.save_btn{
+	float:right;
+	margin:30px 10px auto auto;
+	height: 45px;
+	width: 100px;
+	background-color: #9B8300;
+	border-radius: 10px;
+	border: 0px solid burlywood;
+	color: #FFFFFF;
+	font-size: 20px;
+	transition: all 0.5s;
+}
+.save_btn:hover{
+	background-color: #B0A777;
+}
 .per_back{
     height: 45px;
     width: 120px;
