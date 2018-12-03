@@ -1,13 +1,17 @@
 .header{
 	height: 70px;
-	background-color: rgba(190,160,110,0.7);
+	background-color: #9B8300;
    	position: fixed;
     z-index: 1;
 }
 
 .logo{
 	position: relative;
+	white-space: nowrap;
 	float: left;
+	font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif; 
+	color: #FFFFFF;
+	font-weight: bold;
 	margin: 10px auto auto 20px;
 	width: 50px;
 	height: 50px;

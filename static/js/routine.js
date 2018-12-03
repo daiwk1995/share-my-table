@@ -641,7 +641,7 @@
                 success: function (data) {
                     if (data.count !== 0) {
                         for (let i = 0; i < data.results.length; i++) {
-                            str += "<div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row btn center-block' style='margin: 10px auto;background-color: #DEB887; border-radius: 10px; text-align: left'><span style='margin-left: 10px; font-size: 26px; color: #2E2D3C;'>";
+                            str += "<div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row btn center-block' style='margin: 10px auto;background-color: #9B8300; border-radius: 10px; text-align: left'><span style='margin-left: 10px; font-size: 26px; color: #2E2D3C;'>";
                             str += data.results[i].title;
                             str += "</span><br/><span style='margin-left: 10px; color: whitesmoke;'>Calories：";
                             str += data.results[i].calories;
@@ -715,7 +715,7 @@
                     if (data.count !== 0) {
                         if (data.count !== 0) {
                             for (let i = 0; i < data.results.length; i++) {
-                                str += "<div style='position:relative;margin-top: 20px; width:100%;height:90px;background-color:#DEB887;border-radius:10px; border: 2px solid #FACD96;'><br/><span style='margin: 0 auto auto 10px;font-size: 24px;'>";
+                                str += "<div style='position:relative;margin-top: 20px; width:100%;height:90px;background-color:#9B8300;border-radius:10px; border: 0px solid #FACD96;'><br/><span style='margin: 0 auto auto 10px;font-size: 24px;'>";
                                 str += data.results[i].content;
                                 str += "</span><br/><span style='margin-left: 10px;color: whitesmoke;font-size: 16px;'>";
                                 str += data.results[i].user.username;
