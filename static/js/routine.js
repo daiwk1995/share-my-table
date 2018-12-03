@@ -226,25 +226,25 @@
                                 success: function (data) {
                                     if (data.count !== 0) {
                                         for (let i = 0; i < data.results.length; i++) {
-                                            str += "<div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row btn center-block' style='margin: 10px auto;background-color: #DEB887; border-radius: 10px; text-align: left'><span style='margin-left: 10px; font-size: 26px; color: #2E2D3C;'>";
+                                            str += "<div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row btn center-block' style='margin: 10px auto;background-color: #F0DC8C; border-radius: 10px; text-align: left'><span style='margin-left: 10px; font-size: 26px; color: #2E2D3C;'>";
                                             str += data.results[i].title;
-                                            str += "</span><br/><span style='margin-left: 10px; color: whitesmoke;'>Calories：";
+                                            str += "</span><br/><span style='margin-left: 10px; color: #000000;'>Calories：";
                                             str += data.results[i].calories;
-                                            str += "</span><span style='margin-left: 10px; color: whitesmoke;'>Fat：";
+                                            str += "</span><span style='margin-left: 10px; color: #000000;'>Fat：";
                                             str += data.results[i].fat;
-                                            str += "</span><span style='margin-left: 10px; color: whitesmoke;'>Protein: ";
+                                            str += "</span><span style='margin-left: 10px; color: #000000;'>Protein: ";
                                             str += data.results[i].protein;
-                                            str += "</span><span style='margin-left: 10px; color: whitesmoke;'>Rating: ";
+                                            str += "</span><span style='margin-left: 10px; color: #000000;'>Rating: ";
                                             str += data.results[i].rating;
-                                            str += "</span><span style='margin-left: 10px; color: whitesmoke;'>Sodium: ";
+                                            str += "</span><span style='margin-left: 10px; color: #000000;'>Sodium: ";
                                             str += data.results[i].sodium;
-                                            str += "</span><br/><button style='margin: 5px auto 10px 10px; color: whitesmoke;width: 100px;height: 25px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid' onclick='getingre(";
+                                            str += "</span><br/><button style='margin: 5px auto 10px 10px; color: #000000;width: 100px;height: 25px;background-color: #FFA100;border-radius: 10px;border: 0px solid' onclick='getingre(";
                                             str += data.results[i].r_id;
                                             str += ");'>ingredient<span class='caret'></span></button><div style='display: none' id='ingre";
                                             str += data.results[i].r_id;
                                             str += "'><hr/>";
                                             for (let j = 0; j < data.results[i].ingredients.length; j++) {
-                                                str += "<div style='margin-bottom: 5px;'><span style='margin-left: 10px; color: whitesmoke;'>";
+                                                str += "<div style='margin-bottom: 5px;'><span style='margin-left: 10px; color: #000000;'>";
                                                 str += data.results[i].ingredients[j].detail;
                                                 str += "</span></div>";
                                             }
@@ -362,7 +362,7 @@
                     $('.baglist').find('*').remove();
                     if (data.count !== 0) {
                         for (let i = 0; i < data.results.length; i++) {
-                            str += "<tr style=' margin:10px auto; height: 45px; font-size: 16px; text-align: center;'>";
+                            str += "<tr style=' margin:10px auto; height: 45px; font-size: 16px; text-align: center; '>";
                             str += "<td class='row col-lg-offset-1 col-md-offset-1 col-lg-3 col-md-3' onclick='bagitemshow(" + data.results[i].ingredients.id + ")'>"; // col-lg-offset-1 col-md-offset-1
                             str += data.results[i].ingredients.name;
                             str += "</td><td class='row col-lg-3 col-md-3' onclick='bagitemshow(" + data.results[i].ingredients.id + ")'><span id='bag11_";
@@ -641,25 +641,25 @@
                 success: function (data) {
                     if (data.count !== 0) {
                         for (let i = 0; i < data.results.length; i++) {
-                            str += "<div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row btn center-block' style='margin: 10px auto;background-color: #9B8300; border-radius: 10px; text-align: left'><span style='margin-left: 10px; font-size: 26px; color: #2E2D3C;'>";
+                            str += "<div class='col-lg-12 col-xs-12 col-sm-12 col-md-12 row btn center-block' style='margin: 10px auto;background-color: #FFA100; border-radius: 10px; text-align: left'><span style='margin-left: 10px; font-size: 26px; color: #2E2D3C;'>";
                             str += data.results[i].title;
-                            str += "</span><br/><span style='margin-left: 10px; color: whitesmoke;'>Calories：";
+                            str += "</span><br/><span style='margin-left: 10px; color: #000000;'>Calories：";
                             str += data.results[i].calories;
-                            str += "</span><span style='margin-left: 10px; color: whitesmoke;'>Fat：";
+                            str += "</span><span style='margin-left: 10px; color: #000000;'>Fat：";
                             str += data.results[i].fat;
-                            str += "</span><span style='margin-left: 10px; color: whitesmoke;'>Protein: ";
+                            str += "</span><span style='margin-left: 10px; color: #000000;'>Protein: ";
                             str += data.results[i].protein;
-                            str += "</span><span style='margin-left: 10px; color: whitesmoke;'>Rating: ";
+                            str += "</span><span style='margin-left: 10px; color: #000000;'>Rating: ";
                             str += data.results[i].rating;
-                            str += "</span><span style='margin-left: 10px; color: whitesmoke;'>Sodium: ";
+                            str += "</span><span style='margin-left: 10px; color: #000000;'>Sodium: ";
                             str += data.results[i].sodium;
-                            str += "</span><br/><button style='margin: 5px auto 10px 10px; color: whitesmoke;width: 100px;height: 25px;background-color: #8a6d3b;border-radius: 10px;border: 0px solid' onclick='getingre(";
+                            str += "</span><br/><button style='margin: 5px auto 10px 10px; color: #000000;width: 100px;height: 25px;background-color: #B0A777;border-radius: 10px;border: 0px solid' onclick='getingre(";
                             str += data.results[i].r_id;
                             str += ");'>ingredient<span class='caret'></span></button><div style='display: none' id='ingre";
                             str += data.results[i].r_id;
                             str += "'><hr/>";
                             for (let j = 0; j < data.results[i].ingredients.length; j++) {
-                                str += "<div style='margin-bottom: 5px;'><span style='margin-left: 10px; color: whitesmoke;'>";
+                                str += "<div style='margin-bottom: 5px;'><span style='margin-left: 10px; color: #000000;'>";
                                 str += data.results[i].ingredients[j].detail;
                                 str += "</span></div>";
                             }
@@ -729,7 +729,7 @@
                                 str += ")'><img style='width: 25px; height: 25px;' src='s/img/comment.png'/></button></div>";
                                 str += "<div style='margin-top: 5px;height: auto; display: none;' id='comm";
                                 str += data.results[i].id;
-                                str += "'><input style='margin-left: 10px;height: auto; width: 400px; border-radius: 3px; border: 0px solid; text-align: center; color: black; background-color:#EBEBEB;' type='text' id='commcon";
+                                str += "'><input style='margin-left: 10px;height: auto; width: 400px; border-radius: 3px; border: 0px solid; text-align: left; color: black; background-color:#F0DC8C;' type='text' id='commcon";
                                 str += data.results[i].id;
                                 str += "' value=''/>";
                                 str += "<button style=' margin-left: 10px; width: 30px; height: 25px; border: 0px; background-color: transparent;' onclick='sendcomm(";
@@ -761,7 +761,7 @@
                                         str += ");'><img style='width: 20px; height: 20px;' src='s/img/comment.png'/></button>";
                                         str += "<div style='margin-top: 5px;height: auto; display: none;' id='commtoans";
                                         str += data.results[i].message_answered[j].id;
-                                        str += "'><input style='margin-left: 10px;height: auto; width: 400px; border-radius: 3px; border: 0px solid; text-align: center; color: black; background-color:#EBEBEB;' type='text' id='commtocon";
+                                        str += "'><input style='margin-left: 10px;height: auto; width: 400px; border-radius: 3px; border: 0px solid; text-align: left; color: black; background-color:#F0DC8C;' type='text' id='commtocon";
                                         str += data.results[i].message_answered[j].id;
                                         str += "' value=''/>";
                                         str += "<button style='margin-left: 10px; width: 30px; height: 25px; border: 0px; background-color: transparent;' onclick='commenttoans(";

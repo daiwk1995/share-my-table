@@ -95,7 +95,34 @@ ul li{
 .sec_btn:hover {
 	background-color: #B0A777;
 }
-
+.msg_add {
+	float: right;
+	margin: 10px 10px auto auto;
+	width: 100px;
+	height: 50px;
+	background-color: #9B8300;
+	border-radius: 10px;
+	border: 0px solid;
+	font-size: 18px;
+	transition: all 0.5s;
+}
+.msg_add:hover {
+	background-color: #B0A777;
+}
+.msg_back {
+	float: right;
+	margin: 10px 5px auto auto;
+	width: 100px;
+	height: 50px;
+	background-color: #9B8300;
+	border-radius: 10px;
+	border: 0px solid;
+	font-size: 18px;
+	transition: all 0.5s;
+}
+.msg_back:hover {
+	background-color: #B0A777;
+}
 .un_input{
 	margin: 20px auto;
 	width: 350px;
@@ -339,7 +366,7 @@ ul li{
 	height: 560px;
 	background-color: rgba(190,160,110,0.6);
 	border-radius: 20px;
-	border: 2px solid antiquewhite;
+	border: 0px solid antiquewhite;
 }
 
 .per_pho{
@@ -365,6 +392,8 @@ ul li{
 	margin: 25px auto;
 	width: 90%;
 	font-size: 25px;
+	text-align: center;
+	
 }
 
 .page{
